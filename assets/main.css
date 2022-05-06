@@ -8,10 +8,37 @@
 html,
 body {
   height: 100%;
+  margin: 0;
 }
 
 main {
+  display: grid;
+  grid-template-areas: 'header'
+                       'main'
+                       'footer';
+  grid-template-rows: auto;
   height: 100vh;
+  padding: 1rem;
   color: var(--dark-blue);
   background-color: var(--cream);
+}
+
+header {
+  grid-area: header;
+  justify-self: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+footer {
+  grid-area: footer;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.content {
+  grid-area: main;
 }
